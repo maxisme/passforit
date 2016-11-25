@@ -1,13 +1,13 @@
 //
 //  AppDelegate.m
-//  Pass4 It
+//  Pass For It
 //
-//  Created by Max Mitchell on 13/11/2015.
-//  Copyright © 2015 Pass4 It. All rights reserved.
+//  Created by Max Mitchell on 25/11/2016.
+//  Copyright © 2016 Maximilian Mitchell. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <Carbon/Carbon.h>
+#import <Carbon/Carbon.h> // works with the paste funciton
 
 @interface AppDelegate ()
 

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48C602901BF650B8009D863A"
+               BlueprintIdentifier = "4816778A1DE8C43900C33C38"
                BuildableName = "Pass For It.app"
                BlueprintName = "Pass For It"
                ReferencedContainer = "container:Pass For It.xcodeproj">
@@ -28,31 +28,11 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48C602A31BF650B8009D863A"
-               BuildableName = "Pass For It.xctest"
-               BlueprintName = "Pass For ItTests"
-               ReferencedContainer = "container:Pass For It.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "48C602AE1BF650B8009D863A"
-               BuildableName = "Pass For It.xctest"
-               BlueprintName = "Pass For ItUITests"
-               ReferencedContainer = "container:Pass For It.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "48C602901BF650B8009D863A"
+            BlueprintIdentifier = "4816778A1DE8C43900C33C38"
             BuildableName = "Pass For It.app"
             BlueprintName = "Pass For It"
             ReferencedContainer = "container:Pass For It.xcodeproj">
@@ -75,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "48C602901BF650B8009D863A"
+            BlueprintIdentifier = "4816778A1DE8C43900C33C38"
             BuildableName = "Pass For It.app"
             BlueprintName = "Pass For It"
             ReferencedContainer = "container:Pass For It.xcodeproj">
@@ -94,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "48C602901BF650B8009D863A"
+            BlueprintIdentifier = "4816778A1DE8C43900C33C38"
             BuildableName = "Pass For It.app"
             BlueprintName = "Pass For It"
             ReferencedContainer = "container:Pass For It.xcodeproj">

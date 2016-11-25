@@ -7,12 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		480E61851C89D362002C795D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480E61841C89D362002C795D /* Carbon.framework */; };
 		48C602961BF650B8009D863A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C602951BF650B8009D863A /* AppDelegate.m */; };
 		48C602991BF650B8009D863A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C602981BF650B8009D863A /* main.m */; };
 		48C6029B1BF650B8009D863A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C6029A1BF650B8009D863A /* Assets.xcassets */; };
-		48C602A91BF650B8009D863A /* Pass4_ItTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C602A81BF650B8009D863A /* Pass4_ItTests.m */; };
-		48C602B41BF650B8009D863A /* Pass4_ItUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48C602B31BF650B8009D863A /* Pass4_ItUITests.m */; };
 		48C602C61BF6A326009D863A /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 48C602C51BF6A326009D863A /* key.png */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		480E61841C89D362002C795D /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		48C602911BF650B8009D863A /* Pass For It.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pass For It.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C602941BF650B8009D863A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48C602951BF650B8009D863A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,13 +38,8 @@
 		48C6029A1BF650B8009D863A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48C6029F1BF650B8009D863A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C602A41BF650B8009D863A /* Pass For It.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pass For It.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		48C602A81BF650B8009D863A /* Pass4_ItTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pass4_ItTests.m; sourceTree = "<group>"; };
-		48C602AA1BF650B8009D863A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C602AF1BF650B8009D863A /* Pass For It.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pass For It.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		48C602B31BF650B8009D863A /* Pass4_ItUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pass4_ItUITests.m; sourceTree = "<group>"; };
-		48C602B51BF650B8009D863A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C602C51BF6A326009D863A /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
-		48C602C71BFA228E009D863A /* Pass For It-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pass For It-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +47,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				480E61851C89D362002C795D /* Carbon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +70,7 @@
 		48C602881BF650B8009D863A = {
 			isa = PBXGroup;
 			children = (
-				480E61841C89D362002C795D /* Carbon.framework */,
-				48C602931BF650B8009D863A /* Pass4 It */,
-				48C602A71BF650B8009D863A /* Pass4 ItTests */,
-				48C602B21BF650B8009D863A /* Pass4 ItUITests */,
+				48C602931BF650B8009D863A /* Pass For It */,
 				48C602921BF650B8009D863A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,7 +85,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		48C602931BF650B8009D863A /* Pass4 It */ = {
+		48C602931BF650B8009D863A /* Pass For It */ = {
 			isa = PBXGroup;
 			children = (
 				48C602941BF650B8009D863A /* AppDelegate.h */,
@@ -107,8 +94,8 @@
 				48C6029A1BF650B8009D863A /* Assets.xcassets */,
 				48C6029F1BF650B8009D863A /* Info.plist */,
 				48C602971BF650B8009D863A /* Supporting Files */,
-				48C602C71BFA228E009D863A /* Pass For It-Bridging-Header.h */,
 			);
+			name = "Pass For It";
 			path = "Pass4 It";
 			sourceTree = "<group>";
 		};
@@ -118,24 +105,6 @@
 				48C602981BF650B8009D863A /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		48C602A71BF650B8009D863A /* Pass4 ItTests */ = {
-			isa = PBXGroup;
-			children = (
-				48C602A81BF650B8009D863A /* Pass4_ItTests.m */,
-				48C602AA1BF650B8009D863A /* Info.plist */,
-			);
-			path = "Pass4 ItTests";
-			sourceTree = "<group>";
-		};
-		48C602B21BF650B8009D863A /* Pass4 ItUITests */ = {
-			isa = PBXGroup;
-			children = (
-				48C602B31BF650B8009D863A /* Pass4_ItUITests.m */,
-				48C602B51BF650B8009D863A /* Info.plist */,
-			);
-			path = "Pass4 ItUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +169,7 @@
 		48C602891BF650B8009D863A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Pass4 It";
 				TargetAttributes = {
 					48C602901BF650B8009D863A = {
@@ -278,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C602A91BF650B8009D863A /* Pass4_ItTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48C602B41BF650B8009D863A /* Pass4_ItUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,8 +286,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -342,7 +311,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -362,8 +331,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -379,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
