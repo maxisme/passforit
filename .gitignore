@@ -16,5 +16,4 @@ xcuserdata/
 *.xcscmblueprint
 # ------- end --------
 
-login.psd
-key.psd
+*.psd
