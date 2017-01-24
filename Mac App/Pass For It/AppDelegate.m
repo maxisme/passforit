@@ -25,6 +25,8 @@
     _storedStuff = [NSUserDefaults standardUserDefaults];
     
     [self createStatusBarItem];
+    
+    //default options:
     if ([_storedStuff objectForKey:@"number"] == nil && [_storedStuff objectForKey:@"upperCase"] == nil && [_storedStuff objectForKey:@"lowerCase"] == nil) {
         [_numbers setState:NSOnState];
         [_upperCase setState:NSOnState];
@@ -199,6 +201,11 @@
     [item2048 setTag:2048];
     [_passLengthMenu addItem:item2048];
     
+    NSMenuItem* item4096 = [[NSMenuItem alloc] initWithTitle:@"4096" action:@selector(setPassLength:) keyEquivalent:@""];
+    [item4096 setTarget:self];
+    [item4096 setTag:4096];
+    [_passLengthMenu addItem:item4096];
+    
     // Disable auto enable
     [_passLengthMenu setAutoenablesItems:NO];
     [_passLengthMenu setDelegate:(id)self];
@@ -359,94 +366,94 @@
     _password.title = randomString;
 }
 
--(int)passwordQuality:(NSString*)pass{
-    //using http://www.passwordmeter.com/ algo
-    int score = 0; //out of 100
-    
-    //string info
-    int strlen = (int)[pass length];
-    int upperCount=0;
-    int lowerCount=0;
-    int numberCount=0;
-    int symbolCount=0;
-    
-    int reqCounter=0;
-    int repeatCharCounter = 0;
-    int posSeq = 0;
-    for (int i = 0; i < strlen; i++) {
-        char charachter = [pass characterAtIndex:i];
-        if([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:charachter]){
-            upperCount++;
-        }else if([[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:charachter]){
-            lowerCount++;
-        }else if([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:charachter]){
-            numberCount++;
-        }else{
-            symbolCount++;
-        }
-        
-        if([pass characterAtIndex:i - 1] == charachter){
-            repeatCharCounter++;
-        }else{
-            repeatCharCounter = 0;
-        }
-        
-        //sequintial number
-        int nextChar = (int)[pass characterAtIndex:i - 1];
-        if((int)charachter - 1 == nextChar){
-            posSeq++;
-        }else{
-            posSeq = 0;
-        }
-    }
-    
-    int negSeq = 0;
-    for (int i = strlen; i > -1; i--) {
-        char charachter = [pass characterAtIndex:i];
-        int nextChar = (int)[pass characterAtIndex:i - 1];
-        if((int)charachter + 1 == nextChar){
-            negSeq++;
-        }else{
-            negSeq = 0;
-        }
-    }
-    
-    //check requirements
-    if (upperCount > 0) {
-        reqCounter++;
-    }else if (lowerCount > 0) {
-        reqCounter++;
-    }else if(numberCount > 0){
-        reqCounter++;
-    }else if(symbolCount > 0){
-        reqCounter++;
-    }
-    
-    //--- calculate score ---
-    //+
-    score += strlen * 4;
-    score += ((strlen-upperCount) * 2);
-    score += ((strlen-lowerCount) * 2);
-    score += numberCount * 4;
-    score += symbolCount * 6;
-    
-    //-
-    if(numberCount == 0 && symbolCount == 0){ //only letters
-        score -= upperCount + lowerCount;
-    }
-    
-    if(upperCount == 0 && lowerCount == 0 && symbolCount == 0){ //numbers only
-        score -= numberCount;
-    }
-    
-    //requirements
-    if (reqCounter >= 3 && strlen >= 8){
-        score += (reqCounter + 1) * 2; // +1 for 8 char requirement
-    }
-    
-    
-    return score;
-}
+//-(int)passwordQuality:(NSString*)pass{
+//    //using http://www.passwordmeter.com/ algo
+//    int score = 0; //out of 100
+//    
+//    //string info
+//    int strlen = (int)[pass length];
+//    int upperCount=0;
+//    int lowerCount=0;
+//    int numberCount=0;
+//    int symbolCount=0;
+//    
+//    int reqCounter=0;
+//    int repeatCharCounter = 0;
+//    int posSeq = 0;
+//    for (int i = 0; i < strlen; i++) {
+//        char charachter = [pass characterAtIndex:i];
+//        if([[NSCharacterSet uppercaseLetterCharacterSet] characterIsMember:charachter]){
+//            upperCount++;
+//        }else if([[NSCharacterSet lowercaseLetterCharacterSet] characterIsMember:charachter]){
+//            lowerCount++;
+//        }else if([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:charachter]){
+//            numberCount++;
+//        }else{
+//            symbolCount++;
+//        }
+//        
+//        if([pass characterAtIndex:i - 1] == charachter){
+//            repeatCharCounter++;
+//        }else{
+//            repeatCharCounter = 0;
+//        }
+//        
+//        //sequintial number
+//        int nextChar = (int)[pass characterAtIndex:i - 1];
+//        if((int)charachter - 1 == nextChar){
+//            posSeq++;
+//        }else{
+//            posSeq = 0;
+//        }
+//    }
+//    
+//    int negSeq = 0;
+//    for (int i = strlen; i > -1; i--) {
+//        char charachter = [pass characterAtIndex:i];
+//        int nextChar = (int)[pass characterAtIndex:i - 1];
+//        if((int)charachter + 1 == nextChar){
+//            negSeq++;
+//        }else{
+//            negSeq = 0;
+//        }
+//    }
+//    
+//    //check requirements
+//    if (upperCount > 0) {
+//        reqCounter++;
+//    }else if (lowerCount > 0) {
+//        reqCounter++;
+//    }else if(numberCount > 0){
+//        reqCounter++;
+//    }else if(symbolCount > 0){
+//        reqCounter++;
+//    }
+//    
+//    //--- calculate score ---
+//    //+
+//    score += strlen * 4;
+//    score += ((strlen-upperCount) * 2);
+//    score += ((strlen-lowerCount) * 2);
+//    score += numberCount * 4;
+//    score += symbolCount * 6;
+//    
+//    //-
+//    if(numberCount == 0 && symbolCount == 0){ //only letters
+//        score -= upperCount + lowerCount;
+//    }
+//    
+//    if(upperCount == 0 && lowerCount == 0 && symbolCount == 0){ //numbers only
+//        score -= numberCount;
+//    }
+//    
+//    //requirements
+//    if (reqCounter >= 3 && strlen >= 8){
+//        score += (reqCounter + 1) * 2; // +1 for 8 char requirement
+//    }
+//    
+//    
+//    return score;
+//}
 
 #pragma mark - copy and paste
 -(void)paste{
